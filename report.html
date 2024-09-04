@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>report.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="module-20-report">Module 20 Report</h1>
+<h2 id="overview-of-the-analysis">Overview of the Analysis</h2>
+<p><strong>Purpose of the Analysis</strong> - The goal of this analysis is to determine if the Logistic Regression machine learning model can more accurately predict healthy loans versus high-risk loans using the original dataset or a dataset that is resampled to increase the size of the minority class.</p>
+<p><strong>The Dataset</strong> - The dataset used to preform the analysis consists of information on 77,536 loans. The data includes columns for loan_size, interest_rate, borrower_income, debt_to_income_ratio, number_of_accounts, derotatory_marks, total_debt, and loan_status. The category that we are attempting to predict with our analysis is<br>
+<strong>Loan status</strong>. The data provided in the remaining columns will be used as features to train the data and inform the predictions.<br>
+<strong>Stages of the Machine Learning Process</strong> - The stages of the machine learning process are very scripted. If followed in order, they provide you with an accurate assessment of the model’s ability to make predictions. The stages of the machine learning process are as follows:</p>
+<pre><code>- Prepare the data- Import the file, establish the data fram, evaluate the columns and features
+
+- Seperate the data into features and labels - The labels are what you are attempting to predict, is the status of the loan healthy (0) or high-risk (1). The features are all of the remaining data you will use to train and test the model.
+
+- Use the train_test_split function to seperate the features and labels data into training and testing datasets.
+
+-Import the machine learning model from the library- In this instance, we will be importing LogisticRegression from Sklearn
+	
+	* Instantiate the model
+	
+	* Fit the model using the training data
+
+	* Use the model to make predictions using the features test data
+
+	* Evaluate the predictions - Evaluations are down by calculating and comparing metrics like accuracry score, a confusion matrix, and a classifications report.
+</code></pre>
+<p><strong>Machine Learning Methods Utilized</strong></p>
+<p>The primary model used in this analysis is:</p>
+<pre><code>-LogisticRegression model from SKLearn
+</code></pre>
+<p>Supporting functions used in this analysis are:</p>
+<pre><code>- train_test_split from SKLearn
+</code></pre>
+<p>Models are evaluated using the following functions:</p>
+<pre><code>- confusion_matrix from SKLearn
+- classifications_report from SKLearn
+</code></pre>
+<h2 id="results">Results</h2>
+<p>Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.</p>
+<ul>
+<li>Machine Learning Model - Logistic Regression:
+<ul>
+<li><strong>Accuracy Score:</strong> 99%</li>
+<li><strong>Precision Scores:</strong>
+<ul>
+<li>Class 0 (Healthy Loans): 100%</li>
+<li>Class 1 (High-Risk Loans): 85%</li>
+</ul>
+</li>
+<li><strong>Recalls Scores:</strong>
+<ul>
+<li>Class 0 (Healthy Loans): 99%</li>
+<li>Class 1 (High-Risk Loans): 91%</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The model does a great job using the original data to predicting the values of the healthy loans. Precision was 100% and recall was 99%.</p>
+<p>The model is pretty good at predicitng the values of high risk loans, but not as good as predicting the healthy loans. Precision was 85% and recall was 91%.</p>
+<p>Given this information, it appears that the Logistic Regression model does a great job at predicting both healthy and high-risk loans, given the features that are used to train the data.</p>
+</div>
+</body>
+
+</html>
